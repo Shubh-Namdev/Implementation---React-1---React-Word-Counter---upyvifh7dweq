@@ -6,6 +6,9 @@ const App = () => {
  const [charCount, changeCharCount] = useState("");
 
  const wordNumber=(word) => {
+   if(word.length == 0){
+     return 0;
+   }
    const wordCount = word.split(" ").length;
    return wordCount;
  }
