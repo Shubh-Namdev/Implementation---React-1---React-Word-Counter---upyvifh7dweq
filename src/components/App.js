@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/App.css';
 const App = () => {
- const [charSize, changeCharSize] = useState(20);
+ const [charSize, changeCharSize] = useState(24);
  const [wordLimit, changeWordLimit] = useState(50);
  const [charCount, changeCharCount] = useState("");
 
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div id="main">
       <form>
-        <input type="range" value={charSize} onChange={(e) => {
+        <input type="range" min="16" max="32" value={charSize} onChange={(e) => {
           changeCharSize(e.target.value);
           console.log(charSize)
         }}/>
